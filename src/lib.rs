@@ -7,8 +7,8 @@ pub mod html_writer;
 pub mod mapper;
 pub mod parser;
 pub mod schema;
-pub mod tokenizer;
 pub mod tag;
+pub mod tokenizer;
 
 pub type CowStr = Cow<'static, str>;
 pub const HEADER_TAG: u8 = b'#';

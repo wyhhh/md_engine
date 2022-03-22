@@ -46,12 +46,12 @@ impl<S: Schema, W: HtmlWriter> Mapper<S, W> {
 
     pub fn write_tag_end(&mut self, tag: Tag) -> io::Result<()> {
         self.writer.write(tag.end_tag(&self.schema).as_bytes())?;
-		W::set_used_tag(tag);
-		
-		Ok(())
+        W::set_used_tag(tag);
+
+        Ok(())
     }
 
-	pub fn write_css(&mut self) -> io::Result<()> {
-		self.writer.write_css(&self.schema)
-	}
+    pub fn write_css(&mut self) -> io::Result<()> {
+        self.writer.write_css(&self.schema)
+    }
 }

@@ -34,7 +34,7 @@ impl Tag {
             Tag::BlockQuote => 6,
             Tag::TaskList(true) => 7,
             Tag::TaskList(false) => 8,
-			_ => unreachable!()
+            _ => unreachable!(),
         }
     }
 

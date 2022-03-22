@@ -1,4 +1,3 @@
-
 pub trait Schema {
     fn h1_start(&self) -> &str;
     fn h1_end(&self) -> &str;
@@ -18,31 +17,29 @@ pub trait Schema {
     fn task_list_done_end(&self) -> &str;
     fn task_list_todo_start(&self) -> &str;
     fn task_list_todo_end(&self) -> &str;
-	fn code_block_start(&self) -> &str;
-	fn code_block_end(&self) -> &str;
+    fn code_block_start(&self) -> &str;
+    fn code_block_end(&self) -> &str;
 
-	fn h1_css(&self) -> &str; 
-	fn h2_css(&self) -> &str; 
-	fn h3_css(&self) -> &str; 
-	fn h4_css(&self) -> &str; 
-	fn h5_css(&self) -> &str; 
-	fn h6_css(&self) -> &str; 
-	fn block_quote_css(&self) -> &str;
-	fn task_list_done_css(&self) -> &str;
-	fn task_list_todo_css(&self) -> &str;
-	fn code_block_css(&self) -> &str;
+    fn h1_css(&self) -> &str;
+    fn h2_css(&self) -> &str;
+    fn h3_css(&self) -> &str;
+    fn h4_css(&self) -> &str;
+    fn h5_css(&self) -> &str;
+    fn h6_css(&self) -> &str;
+    fn block_quote_css(&self) -> &str;
+    fn task_list_done_css(&self) -> &str;
+    fn task_list_todo_css(&self) -> &str;
+    fn code_block_css(&self) -> &str;
 
-	fn css_tag_start(&self) -> &str {
-		"<style>"
-	}
-	fn css_tag_end(&self) -> &str {
-		"</style>"
-	}
+    fn css_tag_start(&self) -> &str {
+        "<style>"
+    }
+    fn css_tag_end(&self) -> &str {
+        "</style>"
+    }
 }
 
-pub trait SyntaxHighlight {
-	
-}
+pub trait SyntaxHighlight {}
 
 pub struct DefaultSchema;
 
@@ -104,19 +101,19 @@ impl Schema for DefaultSchema {
     }
 
     fn task_list_done_start(&self) -> &str {
-		r#"<div class="task-list-done"></div><span class="task-list-done-text">"#
+        r#"<div class="task-list-done"></div><span class="task-list-done-text">"#
     }
 
     fn task_list_done_end(&self) -> &str {
-		"</span>"
+        "</span>"
     }
 
     fn task_list_todo_start(&self) -> &str {
-		r#"<div class="task-list-todo"></div><span class="task-list-todo-text">"#
+        r#"<div class="task-list-todo"></div><span class="task-list-todo-text">"#
     }
 
     fn task_list_todo_end(&self) -> &str {
-		"</span>"
+        "</span>"
     }
 
     fn h1_css(&self) -> &str {
@@ -132,11 +129,11 @@ impl Schema for DefaultSchema {
     }
 
     fn h4_css(&self) -> &str {
-		""
+        ""
     }
 
     fn h5_css(&self) -> &str {
-		""
+        ""
     }
 
     fn h6_css(&self) -> &str {
@@ -144,7 +141,7 @@ impl Schema for DefaultSchema {
     }
 
     fn block_quote_css(&self) -> &str {
-		r#".block-quote {
+        r#".block-quote {
 			margin-top: 5px;
 			border-left: 2px solid #666666;
 			padding-left: 10px; 
@@ -153,7 +150,7 @@ impl Schema for DefaultSchema {
     }
 
     fn task_list_done_css(&self) -> &str {
-		r#".task-list-done {
+        r#".task-list-done {
 			display:inline-block;
 			border: black solid 1px;
 			width: 10px;
@@ -183,11 +180,11 @@ impl Schema for DefaultSchema {
     }
 
     fn code_block_end(&self) -> &str {
-		"</div>"
+        "</div>"
     }
 
     fn code_block_css(&self) -> &str {
-		r#".code-block {
+        r#".code-block {
 			background-color: #999999
 		}"#
     }

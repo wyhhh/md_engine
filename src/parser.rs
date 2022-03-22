@@ -232,7 +232,7 @@ impl<'a, S: Schema, W: HtmlWriter, R: Read + 'a> Parser for StatefulParser<'a, S
                 },
                 None => {
                     self.solve_end()?;
-					self.mapper.write_css()?;
+                    self.mapper.write_css()?;
                     return Ok(());
                 }
             }

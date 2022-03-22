@@ -1,3 +1,4 @@
+use crate::tag::Tag;
 use crate::BLOCK_QUOTE_TAG;
 use crate::HEADER_TAG;
 use chr::Chr;
@@ -6,8 +7,6 @@ use std::io;
 use std::io::Read;
 use std::iter::Peekable;
 use std::marker::PhantomData;
-use crate::tag::Tag;
-
 
 #[derive(Clone, Copy, PartialEq, Eq)]
 pub enum Token<'a> {
@@ -322,7 +321,6 @@ impl Token<'_> {
         }
     }
 }
-
 
 #[test]
 fn test() {
