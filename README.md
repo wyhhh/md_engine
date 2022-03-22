@@ -2,9 +2,9 @@
 Blazingly fast processer with Markdown format, NO ALLOCATION in the process, one pass resolving.
 
 # Todo
-✨ Headers
-✨ Todo List
-✨ Quote
+- [x] Headers
+- [x]  Todo List
+- [x] Quote
 - [ ] Code
 - [ ] etc...
 
