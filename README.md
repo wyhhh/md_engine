@@ -4,7 +4,7 @@ Blazingly fast processer with Markdown format, NO ALLOCATION in the process, one
 # Todo
 ✨ Headers<br>
 ✨ Todo List<br>
-✨ Quote<br>
+✨ Quote
 - [ ] Code
 - [ ] etc...
 
